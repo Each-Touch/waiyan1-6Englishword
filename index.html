@@ -6,7 +6,7 @@
     <title>小学英语词汇全解 (2023外研版)</title>
     <style>
         :root {
-            --primary: #02543B; /* 主色调 */
+            --primary: #02543B;
             --bg: #f3f4f6;
             --card-bg: #ffffff;
             --text-main: #1f2937;
@@ -20,13 +20,12 @@
             background-color: var(--bg);
             color: var(--text-main);
             margin: 0;
-            /* 顶部留白给固定导航栏 */
             padding: 76px 15px 40px 15px; 
             line-height: 1.5;
             -webkit-tap-highlight-color: transparent;
         }
 
-        /* --- 顶部 LOGO 栏样式 --- */
+        /* --- 顶部 LOGO 栏 --- */
         .watermark-overlay {
             position: fixed;
             top: 0;
@@ -54,7 +53,6 @@
             display: block;
             object-fit: contain;
         }
-        /* ------------------------------------- */
 
         .header-box {
             max-width: 800px;
@@ -66,7 +64,7 @@
             box-shadow: 0 4px 10px -2px rgba(0, 0, 0, 0.05);
         }
 
-        h1 { margin: 0 0 8px; color: var(--primary); font-size: 1.5rem; }
+        h1 { margin: 0 0 8px; color: var(--primary); font-size: 1.4rem; }
         p { margin: 0; color: var(--text-sub); font-size: 0.9rem; }
         
         .controls { 
@@ -133,7 +131,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* 表格样式 */
         .word-table {
             width: 100%;
             border-collapse: collapse;
@@ -164,7 +161,6 @@
         .col-ipa { color: #94a3b8; font-family: 'Arial Unicode MS', sans-serif; font-size: 0.85rem; width: 25%; }
         .col-cn { color: #475569; width: 30%; }
 
-        /* 隐藏中文模式 */
         body.hide-cn .col-cn { opacity: 0; transition: opacity 0.3s; }
         body.hide-cn .col-cn:active { opacity: 1; } 
 
@@ -175,7 +171,6 @@
             accent-color: var(--accent);
         }
 
-        /* 已完成样式 */
         tr.completed td { opacity: 0.4; }
         tr.completed .col-word { text-decoration: line-through; }
         tr.completed .col-audio { opacity: 1; } 
@@ -209,13 +204,13 @@
 </div>
 
 <script>
-    // 完整数据
+    // 重新平衡后的完整数据 (每天约 30 个词)
     const fullData = [
   {
     "day": 1,
     "content": [
       {
-        "category": "动作 (基础)",
+        "category": "基础动作",
         "words": [
           ["run", "rʌn", "跑"],
           ["jump", "dʒʌmp", "跳"],
@@ -226,30 +221,17 @@
           ["draw", "drɔː", "画画"],
           ["write", "raɪt", "写"],
           ["read", "riːd", "读"],
-          ["listen to", "ˈlɪsn tuː", "听..."],
-          ["speak", "spiːk", "说（语言）"],
+          ["listen", "ˈlɪsn", "听"],
+          ["speak", "spiːk", "说"],
           ["say", "seɪ", "说"],
           ["talk", "tɔːk", "谈话"],
           ["tell", "tel", "告诉"],
           ["ask", "ɑːsk", "问"],
-          ["answer", "ˈɑːnsə", "回答"],
-          ["think", "θɪŋk", "想"],
-          ["know", "nəʊ", "知道"],
-          ["understand", "ˌʌndəˈstænd", "理解"],
-          ["learn", "lɜːn", "学习"],
-          ["study", "ˈstʌdi", "研究；学习"],
-          ["teach", "tiːtʃ", "教"],
-          ["play", "pleɪ", "玩；演奏"],
-          ["climb", "klaɪm", "爬"],
-          ["fly", "flaɪ", "飞"],
-          ["skip", "skɪp", "跳绳"],
-          ["catch", "kætʃ", "抓，捉"],
-          ["ride", "raɪd", "骑"],
-          ["clap", "klæp", "拍手"]
+          ["answer", "ˈɑːnsə", "回答"]
         ]
       },
       {
-        "category": "动作 (日常)",
+        "category": "日常活动",
         "words": [
           ["get up", "ɡet ʌp", "起床"],
           ["wake", "weɪk", "醒来"],
@@ -258,13 +240,10 @@
           ["drink", "drɪŋk", "喝"],
           ["go to school", "ɡəʊ tuː skuːl", "去上学"],
           ["go to work", "ɡəʊ tuː wɜːk", "去上班"],
-          ["come on", "kʌm ɒn", "加油；快点"],
-          ["hurry up", "ˈhʌri ʌp", "快点"],
-          ["wait", "weɪt", "等待"],
-          ["stay", "steɪ", "停留；保持"],
-          ["finish", "ˈfɪnɪʃ", "完成"],
-          ["tidy up", "ˈtaɪdi ʌp", "整理"],
-          ["go shopping", "ɡəʊ ˈʃɒpɪŋ", "去购物"]
+          ["play", "pleɪ", "玩"],
+          ["watch TV", "wɒtʃ", "看电视"],
+          ["wash", "wɒʃ", "洗"],
+          ["clean", "kliːn", "打扫"]
         ]
       }
     ]
@@ -273,18 +252,16 @@
     "day": 2,
     "content": [
       {
-        "category": "动作 (交互与物品)",
+        "category": "交互与操作",
         "words": [
           ["go", "ɡəʊ", "去"],
           ["come", "kʌm", "来"],
           ["bring", "brɪŋ", "带来"],
-          ["take", "teɪk", "拿走；乘坐"],
+          ["take", "teɪk", "拿走"],
           ["give", "ɡɪv", "给"],
           ["send", "send", "发送"],
           ["buy", "baɪ", "买"],
           ["sell", "sel", "卖"],
-          ["pay", "peɪ", "支付"],
-          ["cost", "kɒst", "花费"],
           ["make", "meɪk", "制作"],
           ["do", "duː", "做"],
           ["work", "wɜːk", "工作"],
@@ -294,21 +271,15 @@
           ["close", "kləʊz", "关闭"],
           ["start", "stɑːt", "开始"],
           ["stop", "stɒp", "停止"],
+          ["finish", "ˈfɪnɪʃ", "完成"],
           ["find", "faɪnd", "找到"],
           ["look for", "lʊk fɔː", "寻找"],
           ["lose", "luːz", "丢失"],
           ["hide", "haɪd", "躲藏"],
-          ["seek", "siːk", "寻找"],
-          ["wash", "wɒʃ", "洗"],
-          ["clean", "kliːn", "打扫"],
           ["collect", "kəˈlekt", "收集"],
-          ["pick", "pɪk", "采，摘"],
           ["invent", "ɪnˈvent", "发明"],
           ["print", "prɪnt", "印刷"],
-          ["paint", "peɪnt", "绘画；涂色"],
-          ["build", "bɪld", "建造"],
-          ["stick", "stɪk", "粘贴"],
-          ["tie", "taɪ", "系，扎"]
+          ["build", "bɪld", "建造"]
         ]
       }
     ]
@@ -317,13 +288,19 @@
     "day": 3,
     "content": [
       {
-        "category": "动作 (情感与思维)",
+        "category": "认知与情感动词",
         "words": [
+          ["think", "θɪŋk", "想"],
+          ["know", "nəʊ", "知道"],
+          ["understand", "ˌʌndəˈstænd", "理解"],
+          ["learn", "lɜːn", "学习"],
+          ["study", "ˈstʌdi", "研究；学习"],
+          ["teach", "tiːtʃ", "教"],
           ["like", "laɪk", "喜欢"],
           ["love", "lʌv", "爱"],
           ["hate", "heɪt", "讨厌"],
           ["enjoy", "ɪnˈdʒɔɪ", "享受"],
-          ["miss", "mɪs", "想念；错过"],
+          ["miss", "mɪs", "想念"],
           ["forget", "fəˈɡet", "忘记"],
           ["remember", "rɪˈmembə", "记得"],
           ["believe", "bɪˈliːv", "相信"],
@@ -333,51 +310,19 @@
           ["want", "wɒnt", "想要"],
           ["worry", "ˈwʌri", "担心"],
           ["care", "keə", "在乎"],
-          ["laugh", "lɑːf", "大笑"],
-          ["smile", "smaɪl", "微笑"],
-          ["cry", "kraɪ", "哭"],
-          ["shout", "ʃaʊt", "大喊"],
-          ["celebrate", "ˈselɪbreɪt", "庆祝"],
-          ["welcome", "ˈwelkəm", "欢迎"],
-          ["meet", "miːt", "遇见"],
-          ["visit", "ˈvɪzɪt", "拜访；参观"],
-          ["feel", "fiːl", "感觉"],
-          ["hear", "hɪə(r)", "听见"]
+          ["feel", "fiːl", "感觉"]
         ]
       },
       {
-        "category": "★ 动词过去式",
+        "category": "常用动词短语",
         "words": [
-           ["went", "went", "去 (go过去式)"],
-           ["saw", "sɔː", "看见 (see过去式)"],
-           ["took", "tʊk", "拿/花费 (take过去式)"],
-           ["ate", "et", "吃 (eat过去式)"],
-           ["had", "hæd", "有/度过 (have过去式)"],
-           ["bought", "bɔːt", "买 (buy过去式)"],
-           ["wore", "wɔː(r)", "穿 (wear过去式)"],
-           ["fell", "fel", "摔倒 (fall过去式)"],
-           ["became", "bɪˈkeɪm", "变成 (become过去式)"],
-           ["said", "sed", "说 (say过去式)"],
-           ["lost", "lɒst", "丢失 (lose过去式)"],
-           ["found", "faʊnd", "发现 (find过去式)"],
-           ["came", "keɪm", "来 (come过去式)"],
-           ["won", "wʌn", "赢 (win过去式)"],
-           ["drew", "druː", "画 (draw过去式)"],
-           ["painted", "peɪntɪd", "涂色 (paint过去式)"],
-           ["told", "təʊld", "告诉 (tell过去式)"],
-           ["met", "met", "遇见 (meet过去式)"],
-           ["spoke", "spəʊk", "说 (speak过去式)"],
-           ["wrote", "rəʊt", "写 (write过去式)"],
-           ["gave", "ɡeɪv", "给 (give过去式)"],
-           ["forgot", "fəˈɡɒt", "忘记 (forget过去式)"],
-           ["left", "left", "离开/丢下 (leave过去式)"],
-           ["flew", "fluː", "飞 (fly过去式)"],
-           ["spent", "spent", "度过 (spend过去式)"],
-           ["brought", "brɔːt", "带来 (bring过去式)"],
-           ["taught", "tɔːt", "教 (teach过去式)"],
-           ["drove", "drəʊv", "驾驶 (drive过去式)"],
-           ["drank", "dræŋk", "喝 (drink过去式)"],
-           ["learnt", "lɜːnt", "学习 (learn过去式)"]
+           ["hurry up", "ˈhʌri ʌp", "快点"],
+           ["come on", "kʌm ɒn", "加油"],
+           ["look after", "lʊk ˈɑːftə", "照顾"],
+           ["tidy up", "ˈtaɪdi ʌp", "整理"],
+           ["put on", "pʊt ɒn", "穿上"],
+           ["take off", "teɪk ɒf", "脱下"],
+           ["make friends", "meɪk frendz", "交朋友"]
         ]
       }
     ]
@@ -386,7 +331,47 @@
     "day": 4,
     "content": [
       {
-        "category": "形容词 (外观与物理)",
+        "category": "★ 重点：动词过去式",
+        "words": [
+           ["went", "went", "去 (go)"],
+           ["saw", "sɔː", "看见 (see)"],
+           ["took", "tʊk", "拿/花费 (take)"],
+           ["ate", "et", "吃 (eat)"],
+           ["had", "hæd", "有/度过 (have)"],
+           ["bought", "bɔːt", "买 (buy)"],
+           ["wore", "wɔː(r)", "穿 (wear)"],
+           ["fell", "fel", "摔倒 (fall)"],
+           ["became", "bɪˈkeɪm", "变成 (become)"],
+           ["said", "sed", "说 (say)"],
+           ["lost", "lɒst", "丢失 (lose)"],
+           ["found", "faʊnd", "发现 (find)"],
+           ["came", "keɪm", "来 (come)"],
+           ["won", "wʌn", "赢 (win)"],
+           ["drew", "druː", "画 (draw)"],
+           ["painted", "peɪntɪd", "涂色 (paint)"],
+           ["told", "təʊld", "告诉 (tell)"],
+           ["met", "met", "遇见 (meet)"],
+           ["spoke", "spəʊk", "说 (speak)"],
+           ["wrote", "rəʊt", "写 (write)"],
+           ["gave", "ɡeɪv", "给 (give)"],
+           ["forgot", "fəˈɡɒt", "忘记 (forget)"],
+           ["left", "left", "离开 (leave)"],
+           ["flew", "fluː", "飞 (fly)"],
+           ["spent", "spent", "度过 (spend)"],
+           ["brought", "brɔːt", "带来 (bring)"],
+           ["taught", "tɔːt", "教 (teach)"],
+           ["drove", "drəʊv", "驾驶 (drive)"],
+           ["drank", "dræŋk", "喝 (drink)"],
+           ["learnt", "lɜːnt", "学习 (learn)"]
+        ]
+      }
+    ]
+  },
+  {
+    "day": 5,
+    "content": [
+      {
+        "category": "形容词 (外观与状态)",
         "words": [
           ["big", "bɪɡ", "大的"],
           ["small", "smɔːl", "小的"],
@@ -401,13 +386,10 @@
           ["light", "laɪt", "轻的"],
           ["fast", "fɑːst", "快的"],
           ["slow", "sləʊ", "慢的"],
-          ["hard", "hɑːd", "硬的；困难的"],
+          ["hard", "hɑːd", "硬的"],
           ["soft", "sɒft", "软的"],
           ["clean", "kliːn", "干净的"],
           ["dirty", "ˈdɜːti", "脏的"],
-          ["beautiful", "ˈbjuːtɪfl", "美丽的"],
-          ["ugly", "ˈʌɡli", "丑陋的"],
-          ["cute", "kjuːt", "可爱的"],
           ["new", "njuː", "新的"],
           ["old", "əʊld", "旧的；老的"],
           ["young", "jʌŋ", "年轻的"],
@@ -417,15 +399,13 @@
           ["messy", "ˈmesi", "凌乱的"],
           ["dry", "draɪ", "干的"],
           ["wet", "wet", "湿的"],
-          ["dark", "dɑːk", "黑暗的"],
-          ["blind", "blaɪnd", "失明的"],
-          ["deaf", "def", "聋的"]
+          ["dark", "dɑːk", "黑暗的"]
         ]
       }
     ]
   },
   {
-    "day": 5,
+    "day": 6,
     "content": [
       {
         "category": "形容词 (评价与感觉)",
@@ -441,7 +421,7 @@
           ["angry", "ˈæŋɡri", "生气的"],
           ["tired", "ˈtaɪəd", "累的"],
           ["busy", "ˈbɪzi", "忙的"],
-          ["free", "friː", "空闲的；免费的"],
+          ["free", "friː", "空闲的"],
           ["cheap", "tʃiːp", "便宜的"],
           ["expensive", "ɪkˈspensɪv", "昂贵的"],
           ["easy", "ˈiːzi", "容易的"],
@@ -452,25 +432,19 @@
           ["interesting", "ˈɪntrəstɪŋ", "有趣的"],
           ["boring", "ˈbɔːrɪŋ", "无聊的"],
           ["careful", "ˈkeəfl", "小心的"],
-          ["helpful", "ˈhelpfl", "肯帮忙的"],
+          ["helpful", "ˈhelpfl", "有用的"],
           ["clever", "ˈklevə(r)", "聪明的"],
-          ["thirsty", "ˈθɜːsti", "口渴的"],
-          ["hungry", "ˈhʌŋɡri", "饥饿的"],
-          ["scared", "skeəd", "害怕的"],
-          ["proud", "praʊd", "自豪的"],
-          ["nervous", "ˈnɜːvəs", "紧张的"],
+          ["hungry", "ˈhʌŋɡri", "饿的"],
+          ["thirsty", "ˈθɜːsti", "渴的"],
           ["excited", "ɪkˈsaɪtɪd", "兴奋的"],
           ["famous", "ˈfeɪməs", "著名的"],
-          ["traditional", "trəˈdɪʃənl", "传统的"],
-          ["amazing", "əˈmeɪzɪŋ", "令人吃惊的"],
-          ["fantastic", "fænˈtæstɪk", "极好的"],
           ["real", "rɪəl", "真实的"]
         ]
       }
     ]
   },
   {
-    "day": 6,
+    "day": 7,
     "content": [
       {
         "category": "食物与饮料 (主食)",
@@ -489,23 +463,21 @@
           ["sandwich", "ˈsænwɪtʃ", "三明治"],
           ["hot dog", "hɒt dɒɡ", "热狗"],
           ["chips", "tʃɪps", "薯条"],
-          ["fish and chips", "fɪʃ ənd tʃɪps", "炸鱼薯条"],
           ["soup", "suːp", "汤"],
           ["breakfast", "ˈbrekfəst", "早餐"],
           ["lunch", "lʌntʃ", "午餐"],
           ["dinner", "ˈdɪnə", "晚餐"],
           ["meal", "miːl", "一餐"],
           ["sausage", "ˈsɒsɪdʒ", "香肠"],
-          ["crisp", "krɪsp", "炸薯片"],
           ["cheese", "tʃiːz", "奶酪"],
-          ["fast food", "fɑːst fuːd", "快餐"],
-          ["dish", "dɪʃ", "菜肴"]
+          ["dish", "dɪʃ", "菜肴"],
+          ["fast food", "fɑːst fuːd", "快餐"]
         ]
       }
     ]
   },
   {
-    "day": 7,
+    "day": 8,
     "content": [
       {
         "category": "食物与饮料 (蔬果零食)",
@@ -521,10 +493,8 @@
           ["potato", "pəˈteɪtəʊ", "土豆"],
           ["carrot", "ˈkærət", "胡萝卜"],
           ["onion", "ˈʌnjən", "洋葱"],
-          ["ginger", "ˈdʒɪndʒə(r)", "姜"],
           ["ice cream", "ˌaɪs ˈkriːm", "冰淇淋"],
           ["candy", "ˈkændi", "糖果"],
-          ["sweets", "swiːts", "糖果(复)"],
           ["chocolate", "ˈtʃɒklət", "巧克力"],
           ["water", "ˈwɔːtə", "水"],
           ["milk", "mɪlk", "牛奶"],
@@ -532,17 +502,17 @@
           ["tea", "tiː", "茶"],
           ["coffee", "ˈkɒfi", "咖啡"],
           ["coke", "kəʊk", "可乐"],
-          ["cola", "ˈkəʊlə", "可乐"],
           ["milkshake", "ˈmɪlkʃeɪk", "奶昔"],
           ["salad", "ˈsæləd", "沙拉"],
           ["coconut", "ˈkəʊkənʌt", "椰子"],
-          ["watermelon", "ˈwɔːtəmelən", "西瓜"]
+          ["watermelon", "ˈwɔːtəmelən", "西瓜"],
+          ["crisp", "krɪsp", "炸薯片"]
         ]
       }
     ]
   },
   {
-    "day": 8,
+    "day": 9,
     "content": [
       {
         "category": "动物",
@@ -573,36 +543,46 @@
           ["parrot", "ˈpærət", "鹦鹉"],
           ["mouse", "maʊs", "老鼠"]
         ]
-      },
+      }
+    ]
+  },
+  {
+    "day": 10,
+    "content": [
       {
-        "category": "自然与太空 (新增)",
+        "category": "自然、天气与太空",
         "words": [
           ["tree", "triː", "树"],
           ["flower", "ˈflaʊə", "花"],
           ["grass", "ɡrɑːs", "草"],
-          ["plant", "plɑːnt", "植物"],
-          ["seed", "siːd", "种子"],
-          ["leaf", "liːf", "树叶"],
           ["river", "ˈrɪvə", "河流"],
           ["lake", "leɪk", "湖"],
           ["sea", "siː", "海"],
           ["hill", "hɪl", "小山"],
           ["mountain", "ˈmaʊntɪn", "山"],
           ["sky", "skaɪ", "天空"],
-          ["cloud", "klaʊd", "云"],
           ["sun", "sʌn", "太阳"],
           ["moon", "muːn", "月亮"],
           ["star", "stɑː", "星星"],
+          ["cloud", "klaʊd", "云"],
+          ["rain", "reɪn", "雨"],
+          ["snow", "snəʊ", "雪"],
+          ["wind", "wɪnd", "风"],
+          ["weather", "ˈweðə", "天气"],
+          ["sunny", "ˈsʌni", "晴朗的"],
+          ["rainy", "ˈreɪni", "下雨的"],
+          ["windy", "ˈwɪndi", "有风的"],
+          ["cloudy", "ˈklaʊdi", "多云的"],
           ["earth", "ɜːθ", "地球"],
           ["space", "speɪs", "太空"],
           ["spaceship", "ˈspeɪsʃɪp", "宇宙飞船"],
-          ["taikonaut", "ˈtaɪkənɔːt", "宇航员(中国)"]
+          ["taikonaut", "ˈtaɪkənɔːt", "宇航员"]
         ]
       }
     ]
   },
   {
-    "day": 9,
+    "day": 11,
     "content": [
       {
         "category": "家庭与人物",
@@ -615,32 +595,31 @@
           ["sister", "ˈsɪstə", "姐妹"],
           ["grandma", "ˈɡrænmɑː", "奶奶/外婆"],
           ["grandpa", "ˈɡrænpɑː", "爷爷/外公"],
-          ["grandparent", "ˈɡrænpeərənt", "祖父母"],
-          ["uncle", "ˈʌŋkl", "叔叔/舅舅"],
-          ["aunt", "ɑːnt", "阿姨/姑姑"],
-          ["cousin", "ˈkʌzn", "堂(表)兄弟姐妹"],
+          ["uncle", "ˈʌŋkl", "叔叔"],
+          ["aunt", "ɑːnt", "阿姨"],
+          ["cousin", "ˈkʌzn", "堂兄妹"],
           ["boy", "bɔɪ", "男孩"],
           ["girl", "ɡɜːl", "女孩"],
           ["man", "mæn", "男人"],
-          ["men", "men", "男人们(复)"],
           ["woman", "ˈwʊmən", "女人"],
-          ["women", "ˈwɪmɪn", "女人们(复)"],
           ["baby", "ˈbeɪbi", "婴儿"],
           ["kid", "kɪd", "小孩"],
           ["child", "tʃaɪld", "孩子"],
-          ["children", "ˈtʃɪldrən", "孩子们(复)"],
           ["friend", "frend", "朋友"],
           ["classmate", "ˈklɑːsmeɪt", "同学"],
-          ["people", "ˈpiːpl", "人们"]
+          ["people", "ˈpiːpl", "人们"],
+          ["men", "men", "男人们"],
+          ["women", "ˈwɪmɪn", "女人们"],
+          ["children", "ˈtʃɪldrən", "孩子们"]
         ]
       }
     ]
   },
   {
-    "day": 10,
+    "day": 12,
     "content": [
       {
-        "category": "职业",
+        "category": "职业与身份",
         "words": [
           ["teacher", "ˈtiːtʃə", "老师"],
           ["student", "ˈstjuːdnt", "学生"],
@@ -652,23 +631,17 @@
           ["firefighter", "ˈfaɪəfaɪtə", "消防员"],
           ["cook", "kʊk", "厨师"],
           ["worker", "ˈwɜːkə", "工人"],
-          ["player", "ˈpleɪə", "运动员；选手"],
-          ["team", "tiːm", "队伍"],
+          ["player", "ˈpleɪə", "选手"],
           ["winner", "ˈwɪnə", "获胜者"],
           ["actor", "ˈæktə", "演员"],
           ["presenter", "prɪˈzentə", "主持人"],
           ["librarian", "laɪˈbreəriən", "图书管理员"],
           ["sales assistant", "seɪlz əˈsɪstənt", "售货员"],
-          ["cashier", "kæˈʃɪə", "收银员"]
+          ["taikonaut", "ˈtaɪkənɔːt", "中国宇航员"]
         ]
-      }
-    ]
-  },
-  {
-    "day": 11,
-    "content": [
+      },
       {
-        "category": "交通",
+        "category": "交通工具",
         "words": [
           ["bus", "bʌs", "公交车"],
           ["car", "kɑː", "汽车"],
@@ -682,9 +655,14 @@
           ["subway", "ˈsʌbweɪ", "地铁"],
           ["helicopter", "ˈhelɪkɒptə", "直升机"]
         ]
-      },
+      }
+    ]
+  },
+  {
+    "day": 13,
+    "content": [
       {
-        "category": "地点 (城市与设施)",
+        "category": "地点与场所",
         "words": [
           ["school", "skuːl", "学校"],
           ["classroom", "ˈklɑːsruːm", "教室"],
@@ -712,90 +690,7 @@
           ["street", "striːt", "街道"],
           ["village", "ˈvɪlɪdʒ", "乡村"],
           ["countryside", "ˈkʌntrisaɪd", "农村"],
-          ["capital", "ˈkæpɪtl", "首都"],
           ["Chinatown", "ˈtʃaɪnətaʊn", "唐人街"]
-        ]
-      }
-    ]
-  },
-  {
-    "day": 12,
-    "content": [
-      {
-        "category": "方向与位置",
-        "words": [
-          ["left", "left", "左"],
-          ["right", "raɪt", "右"],
-          ["straight", "streɪt", "直"],
-          ["up", "ʌp", "上"],
-          ["down", "daʊn", "下"],
-          ["east", "iːst", "东"],
-          ["west", "west", "西"],
-          ["south", "saʊθ", "南"],
-          ["north", "nɔːθ", "北"],
-          ["front", "frʌnt", "前面"],
-          ["back", "bæk", "后面"],
-          ["middle", "ˈmɪdl", "中间"],
-          ["top", "tɒp", "顶部"],
-          ["bottom", "ˈbɒtəm", "底部"],
-          ["cross", "krɒs", "穿过"]
-        ]
-      },
-      {
-        "category": "时间 (周与月)",
-        "words": [
-          ["Monday", "ˈmʌndeɪ", "星期一"],
-          ["Tuesday", "ˈtjuːzdeɪ", "星期二"],
-          ["Wednesday", "ˈwenzdeɪ", "星期三"],
-          ["Thursday", "ˈθɜːzdeɪ", "星期四"],
-          ["Friday", "ˈfraɪdeɪ", "星期五"],
-          ["Saturday", "ˈsætədeɪ", "星期六"],
-          ["Sunday", "ˈsʌndeɪ", "星期日"],
-          ["weekend", "ˌwiːkˈend", "周末"],
-          ["January", "ˈdʒænjuəri", "一月"],
-          ["February", "ˈfebruəri", "二月"],
-          ["March", "mɑːtʃ", "三月"],
-          ["April", "ˈeɪprəl", "四月"],
-          ["May", "meɪ", "五月"],
-          ["June", "dʒuːn", "六月"],
-          ["July", "dʒuˈlaɪ", "七月"],
-          ["August", "ˈɔːɡəst", "八月"],
-          ["September", "sepˈtembə", "九月"],
-          ["October", "ɒkˈtəʊbə", "十月"],
-          ["November", "nəʊˈvembə", "十一月"],
-          ["December", "dɪˈsembə", "十二月"]
-        ]
-      }
-    ]
-  },
-  {
-    "day": 13,
-    "content": [
-      {
-        "category": "时间 (常用)",
-        "words": [
-          ["year", "jɪə", "年"],
-          ["month", "mʌnθ", "月"],
-          ["week", "wiːk", "周"],
-          ["day", "deɪ", "天"],
-          ["today", "təˈdeɪ", "今天"],
-          ["tomorrow", "təˈmɒrəʊ", "明天"],
-          ["yesterday", "ˈjestədeɪ", "昨天"],
-          ["morning", "ˈmɔːnɪŋ", "早上"],
-          ["afternoon", "ˌɑːftəˈnuːn", "下午"],
-          ["evening", "ˈiːvnɪŋ", "晚上"],
-          ["night", "naɪt", "夜晚"],
-          ["o'clock", "əˈklɒk", "点钟"],
-          ["time", "taɪm", "时间"],
-          ["spring", "sprɪŋ", "春天"],
-          ["summer", "ˈsʌmə", "夏天"],
-          ["autumn", "ˈɔːtəm", "秋天"],
-          ["winter", "ˈwɪntə", "冬天"],
-          ["early", "ˈɜːli", "早"],
-          ["late", "leɪt", "晚"],
-          ["ago", "əˈɡəʊ", "以前"],
-          ["future", "ˈfjuːtʃə", "未来"],
-          ["someday", "ˈsʌmdeɪ", "有朝一日"]
         ]
       }
     ]
@@ -804,7 +699,7 @@
     "day": 14,
     "content": [
       {
-        "category": "学校物品",
+        "category": "学校与学科",
         "words": [
           ["book", "bʊk", "书"],
           ["pen", "pen", "钢笔"],
@@ -816,28 +711,21 @@
           ["chair", "tʃeə", "椅子"],
           ["computer", "kəmˈpjuːtə", "电脑"],
           ["paper", "ˈpeɪpə", "纸"],
-          ["picture", "ˈpɪktʃə", "图片"],
           ["map", "mæp", "地图"],
           ["blackboard", "ˈblækbɔːd", "黑板"],
           ["lesson", "ˈlesn", "课"],
-          ["homework", "ˈhəʊmwɜːk", "家庭作业"],
-          ["stamp", "stæmp", "邮票"]
-        ]
-      },
-      {
-        "category": "学科",
-        "words": [
-           ["English", "ˈɪŋɡlɪʃ", "英语"],
-           ["Chinese", "ˌtʃaɪˈniːz", "语文/中文"],
-           ["Maths", "mæθs", "数学"],
-           ["Art", "ɑːt", "美术"],
-           ["Music", "ˈmjuːzɪk", "音乐"],
-           ["PE", "ˌpiː ˈiː", "体育"],
-           ["Science", "ˈsaɪəns", "科学"],
-           ["History", "ˈhɪstri", "历史"],
-           ["Geography", "dʒiˈɒɡrəfi", "地理"],
-           ["Physics", "ˈfɪzɪks", "物理"],
-           ["Chemistry", "ˈkemɪstri", "化学"]
+          ["homework", "ˈhəʊmwɜːk", "作业"],
+          ["English", "ˈɪŋɡlɪʃ", "英语"],
+          ["Chinese", "ˌtʃaɪˈniːz", "语文"],
+          ["Maths", "mæθs", "数学"],
+          ["Art", "ɑːt", "美术"],
+          ["Music", "ˈmjuːzɪk", "音乐"],
+          ["PE", "ˌpiː ˈiː", "体育"],
+          ["Science", "ˈsaɪəns", "科学"],
+          ["History", "ˈhɪstri", "历史"],
+          ["Geography", "dʒiˈɒɡrəfi", "地理"],
+          ["Physics", "ˈfɪzɪks", "物理"],
+          ["Chemistry", "ˈkemɪstri", "化学"]
         ]
       }
     ]
@@ -868,7 +756,7 @@
         ]
       },
       {
-        "category": "健康",
+        "category": "健康状况",
         "words": [
           ["ill", "ɪl", "生病的"],
           ["sick", "sɪk", "生病的"],
@@ -878,7 +766,6 @@
           ["stomach ache", "ˈstʌmək eɪk", "胃痛"],
           ["hurt", "hɜːt", "受伤/痛"],
           ["medicine", "ˈmedsn", "药"],
-          ["broken", "ˈbrəʊkən", "骨折/坏的"],
           ["blind", "blaɪnd", "盲的"],
           ["deaf", "def", "聋的"]
         ]
@@ -910,6 +797,18 @@
           ["raincoat", "ˈreɪnkəʊt", "雨衣"],
           ["sunglasses", "ˈsʌnɡlɑːsɪz", "太阳镜"]
         ]
+      },
+      {
+        "category": "个人物品",
+        "words": [
+          ["bag", "bæɡ", "包"],
+          ["camera", "ˈkæmərə", "照相机"],
+          ["ticket", "ˈtɪkɪt", "票"],
+          ["passport", "ˈpɑːspɔːt", "护照"],
+          ["key", "kiː", "钥匙"],
+          ["money", "ˈmʌni", "钱"],
+          ["watch", "wɒtʃ", "手表"]
+        ]
       }
     ]
   },
@@ -917,36 +816,31 @@
     "day": 17,
     "content": [
       {
-        "category": "杂项物品",
+        "category": "家居与杂物",
         "words": [
           ["box", "bɒks", "盒子"],
           ["bottle", "ˈbɒtl", "瓶子"],
           ["card", "kɑːd", "卡片"],
-          ["letter", "ˈletə", "信；字母"],
+          ["letter", "ˈletə", "信"],
           ["email", "ˈiːmeɪl", "电子邮件"],
           ["phone", "fəʊn", "电话"],
-          ["watch", "wɒtʃ", "手表"],
           ["clock", "klɒk", "时钟"],
-          ["light", "laɪt", "灯；光"],
+          ["light", "laɪt", "灯"],
           ["bed", "bed", "床"],
           ["sofa", "ˈsəʊfə", "沙发"],
           ["table", "ˈteɪbl", "桌子"],
-          ["money", "ˈmʌni", "钱"],
           ["gift", "ɡɪft", "礼物"],
           ["toy", "tɔɪ", "玩具"],
           ["ball", "bɔːl", "球"],
           ["kite", "kaɪt", "风筝"],
           ["balloon", "bəˈluːn", "气球"],
           ["video", "ˈvɪdiəʊ", "录像"],
-          ["ticket", "ˈtɪkɪt", "票"],
-          ["passport", "ˈpɑːspɔːt", "护照"],
           ["machine", "məˈʃiːn", "机器"],
           ["knife", "naɪf", "刀"],
           ["fork", "fɔːk", "叉"],
           ["chopsticks", "ˈtʃɒpstɪks", "筷子"],
           ["cup", "kʌp", "杯子"],
-          ["umbrella", "ʌmˈbrelə", "雨伞"],
-          ["key", "kiː", "钥匙"]
+          ["postcard", "ˈpəʊstkɑːd", "明信片"]
         ]
       }
     ]
@@ -955,30 +849,57 @@
     "day": 18,
     "content": [
       {
-        "category": "天气与节日",
+        "category": "时间与季节",
         "words": [
-          ["weather", "ˈweðə", "天气"],
-          ["sunny", "ˈsʌni", "晴朗的"],
-          ["rainy", "ˈreɪni", "下雨的"],
-          ["cloudy", "ˈklaʊdi", "多云的"],
-          ["windy", "ˈwɪndi", "有风的"],
-          ["snowy", "ˈsnəʊi", "下雪的"],
-          ["rain", "reɪn", "雨"],
-          ["snow", "snəʊ", "雪"],
-          ["wind", "wɪnd", "风"],
-          ["holiday", "ˈhɒlədeɪ", "假期"],
-          ["Christmas", "ˈkrɪsməs", "圣诞节"],
-          ["New Year", "njuː jɪə", "新年"],
-          ["birthday", "ˈbɜːθdeɪ", "生日"],
-          ["party", "ˈpɑːti", "聚会"],
-          ["Spring Festival", "sprɪŋ ˈfestɪvl", "春节"],
-          ["Mid-Autumn Festival", "mɪd ˈɔːtəm", "中秋节"],
-          ["Dragon Boat Festival", "", "端午节"],
-          ["Thanksgiving", "ˌθæŋksˈɡɪvɪŋ", "感恩节"],
-          ["National Day", "ˈnæʃnəl deɪ", "国庆节"],
-          ["Children's Day", "", "儿童节"],
-          ["Father's Day", "", "父亲节"],
-          ["Mother's Day", "", "母亲节"]
+          ["year", "jɪə", "年"],
+          ["month", "mʌnθ", "月"],
+          ["week", "wiːk", "周"],
+          ["day", "deɪ", "天"],
+          ["today", "təˈdeɪ", "今天"],
+          ["tomorrow", "təˈmɒrəʊ", "明天"],
+          ["yesterday", "ˈjestədeɪ", "昨天"],
+          ["morning", "ˈmɔːnɪŋ", "早上"],
+          ["afternoon", "ˌɑːftəˈnuːn", "下午"],
+          ["evening", "ˈiːvnɪŋ", "晚上"],
+          ["night", "naɪt", "夜晚"],
+          ["time", "taɪm", "时间"],
+          ["spring", "sprɪŋ", "春天"],
+          ["summer", "ˈsʌmə", "夏天"],
+          ["autumn", "ˈɔːtəm", "秋天"],
+          ["winter", "ˈwɪntə", "冬天"],
+          ["Monday", "ˈmʌndeɪ", "周一"],
+          ["Tuesday", "ˈtjuːzdeɪ", "周二"],
+          ["Wednesday", "ˈwenzdeɪ", "周三"],
+          ["Thursday", "ˈθɜːzdeɪ", "周四"],
+          ["Friday", "ˈfraɪdeɪ", "周五"],
+          ["Saturday", "ˈsætədeɪ", "周六"],
+          ["Sunday", "ˈsʌndeɪ", "周日"],
+          ["weekend", "ˌwiːkˈend", "周末"],
+          ["January", "ˈdʒænjuəri", "一月"],
+          ["February", "ˈfebruəri", "二月"],
+          ["March", "mɑːtʃ", "三月"],
+          ["April", "ˈeɪprəl", "四月"],
+          ["May", "meɪ", "五月"],
+          ["June", "dʒuːn", "六月"],
+          ["July", "dʒuˈlaɪ", "七月"],
+          ["August", "ˈɔːɡəst", "八月"],
+          ["September", "sepˈtembə", "九月"],
+          ["October", "ɒkˈtəʊbə", "十月"],
+          ["November", "nəʊˈvembə", "十一月"],
+          ["December", "dɪˈsembə", "十二月"]
+        ]
+      },
+      {
+        "category": "节日",
+        "words": [
+           ["holiday", "ˈhɒlədeɪ", "假期"],
+           ["Christmas", "ˈkrɪsməs", "圣诞节"],
+           ["New Year", "njuː jɪə", "新年"],
+           ["birthday", "ˈbɜːθdeɪ", "生日"],
+           ["Spring Festival", "sprɪŋ ˈfestɪvl", "春节"],
+           ["Mid-Autumn Festival", "mɪd ˈɔːtəm", "中秋节"],
+           ["Thanksgiving", "ˌθæŋksˈɡɪvɪŋ", "感恩节"],
+           ["National Day", "ˈnæʃnəl deɪ", "国庆节"]
         ]
       }
     ]
@@ -1028,10 +949,10 @@
     "day": 20,
     "content": [
       {
-        "category": "代词与介词",
+        "category": "代词",
         "words": [
           ["I", "aɪ", "我"],
-          ["you", "juː", "你/你们"],
+          ["you", "juː", "你"],
           ["he", "hiː", "他"],
           ["she", "ʃiː", "她"],
           ["it", "ɪt", "它"],
@@ -1044,8 +965,13 @@
           ["mine", "maɪn", "我的(东西)"],
           ["yours", "jɔːz", "你的(东西)"],
           ["hers", "hɜːz", "她的(东西)"],
-          ["us", "ʌs", "我们(宾格)"],
-          ["him", "hɪm", "他(宾格)"],
+          ["us", "ʌs", "我们"],
+          ["him", "hɪm", "他"]
+        ]
+      },
+      {
+        "category": "介词与方向",
+        "words": [
           ["in", "ɪn", "在...里"],
           ["on", "ɒn", "在...上"],
           ["at", "æt", "在..."],
@@ -1055,11 +981,19 @@
           ["beside", "bɪˈsaɪd", "在...旁边"],
           ["next to", "nekst tuː", "紧挨着"],
           ["between", "bɪˈtwiːn", "在...之间"],
-          ["for", "fɔː", "为了；给"],
-          ["with", "wɪð", "和...一起"],
+          ["for", "fɔː", "为了"],
+          ["with", "wɪð", "和..."],
           ["about", "əˈbaʊt", "关于"],
           ["from", "frɒm", "来自"],
-          ["into", "ˈɪntə", "进入"]
+          ["into", "ˈɪntə", "进入"],
+          ["left", "left", "左"],
+          ["right", "raɪt", "右"],
+          ["up", "ʌp", "上"],
+          ["down", "daʊn", "下"],
+          ["east", "iːst", "东"],
+          ["west", "west", "西"],
+          ["south", "saʊθ", "南"],
+          ["north", "nɔːθ", "北"]
         ]
       }
     ]
@@ -1070,14 +1004,14 @@
     const toggleBtn = document.getElementById('btn-toggle');
     let meaningHidden = false;
 
-    // Initialize Card
+    // Render logic
     function renderPlan() {
         app.innerHTML = '';
         fullData.forEach(day => {
             const dayCard = document.createElement('div');
             dayCard.className = 'day-card';
             
-            // Calculate total words
+            // Auto-calculate word count
             let count = 0;
             day.content.forEach(c => count += c.words.length);
 
@@ -1094,7 +1028,8 @@
                     <div class="cat-title">${cat.category}</div>
                     <table class="word-table">
                         ${cat.words.map((w, idx) => {
-                            const uniqueId = `d${day.day}_${cat.category}_${idx}`;
+                            // Unique ID generator
+                            const uniqueId = `d${day.day}_${idx}_${w[0].replace(/\s/g,'')}`;
                             return `
                                 <tr id="row_${uniqueId}" onclick="toggleRow('${uniqueId}')">
                                     <td class="col-check">
@@ -1102,7 +1037,7 @@
                                     </td>
                                     <td class="col-audio" onclick="event.stopPropagation(); speak('${w[0].replace(/'/g, "\\'")}')">🔊</td>
                                     <td class="col-word">${w[0]}</td>
-                                    <td class="col-ipa">/${w[1]}/</td>
+                                    <td class="col-ipa">/${w[1] || ''}/</td>
                                     <td class="col-cn">${w[2]}</td>
                                 </tr>
                             `;
