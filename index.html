@@ -204,7 +204,7 @@
 </div>
 
 <script>
-    // 重新平衡后的完整数据 (每天约 30 个词)
+    // 完整数据 - 包含补充词汇
     const fullData = [
   {
     "day": 1,
@@ -279,7 +279,8 @@
           ["collect", "kəˈlekt", "收集"],
           ["invent", "ɪnˈvent", "发明"],
           ["print", "prɪnt", "印刷"],
-          ["build", "bɪld", "建造"]
+          ["build", "bɪld", "建造"],
+          ["poster", "ˈpəʊstə", "海报"]
         ]
       }
     ]
@@ -322,7 +323,9 @@
            ["tidy up", "ˈtaɪdi ʌp", "整理"],
            ["put on", "pʊt ɒn", "穿上"],
            ["take off", "teɪk ɒf", "脱下"],
-           ["make friends", "meɪk frendz", "交朋友"]
+           ["make friends", "meɪk frendz", "交朋友"],
+           ["have fun", "hæv fʌn", "玩得开心"],
+           ["all right", "ɔːl raɪt", "好的"]
         ]
       }
     ]
@@ -337,7 +340,7 @@
            ["saw", "sɔː", "看见 (see)"],
            ["took", "tʊk", "拿/花费 (take)"],
            ["ate", "et", "吃 (eat)"],
-           ["had", "hæd", "有/度过 (have)"],
+           ["had", "hæd", "有 (have)"],
            ["bought", "bɔːt", "买 (buy)"],
            ["wore", "wɔː(r)", "穿 (wear)"],
            ["fell", "fel", "摔倒 (fall)"],
@@ -362,7 +365,10 @@
            ["taught", "tɔːt", "教 (teach)"],
            ["drove", "drəʊv", "驾驶 (drive)"],
            ["drank", "dræŋk", "喝 (drink)"],
-           ["learnt", "lɜːnt", "学习 (learn)"]
+           ["learnt", "lɜːnt", "学习 (learn)"],
+           ["ran", "ræn", "跑 (run)"],
+           ["got", "ɡɒt", "得到 (get)"],
+           ["sent", "sent", "发送 (send)"]
         ]
       }
     ]
@@ -399,7 +405,10 @@
           ["messy", "ˈmesi", "凌乱的"],
           ["dry", "draɪ", "干的"],
           ["wet", "wet", "湿的"],
-          ["dark", "dɑːk", "黑暗的"]
+          ["dark", "dɑːk", "黑暗的"],
+          ["bored", "bɔːd", "无聊的"],
+          ["funny", "ˈfʌni", "滑稽的"],
+          ["special", "ˈspeʃl", "特别的"]
         ]
       }
     ]
@@ -438,7 +447,9 @@
           ["thirsty", "ˈθɜːsti", "渴的"],
           ["excited", "ɪkˈsaɪtɪd", "兴奋的"],
           ["famous", "ˈfeɪməs", "著名的"],
-          ["real", "rɪəl", "真实的"]
+          ["real", "rɪəl", "真实的"],
+          ["proud", "praʊd", "自豪的"],
+          ["scared", "skeəd", "害怕的"]
         ]
       }
     ]
@@ -463,6 +474,7 @@
           ["sandwich", "ˈsænwɪtʃ", "三明治"],
           ["hot dog", "hɒt dɒɡ", "热狗"],
           ["chips", "tʃɪps", "薯条"],
+          ["fish and chips", "fɪʃ ənd tʃɪps", "炸鱼薯条"],
           ["soup", "suːp", "汤"],
           ["breakfast", "ˈbrekfəst", "早餐"],
           ["lunch", "lʌntʃ", "午餐"],
@@ -550,7 +562,7 @@
     "day": 10,
     "content": [
       {
-        "category": "自然、天气与太空",
+        "category": "自然、太空与环境",
         "words": [
           ["tree", "triː", "树"],
           ["flower", "ˈflaʊə", "花"],
@@ -576,7 +588,10 @@
           ["earth", "ɜːθ", "地球"],
           ["space", "speɪs", "太空"],
           ["spaceship", "ˈspeɪsʃɪp", "宇宙飞船"],
-          ["taikonaut", "ˈtaɪkənɔːt", "宇航员"]
+          ["taikonaut", "ˈtaɪkənɔːt", "宇航员"],
+          ["bamboo", "bæmˈbuː", "竹子"],
+          ["stone", "stəʊn", "石头"],
+          ["ground", "graʊnd", "地面"]
         ]
       }
     ]
@@ -610,7 +625,8 @@
           ["people", "ˈpiːpl", "人们"],
           ["men", "men", "男人们"],
           ["women", "ˈwɪmɪn", "女人们"],
-          ["children", "ˈtʃɪldrən", "孩子们"]
+          ["children", "ˈtʃɪldrən", "孩子们"],
+          ["grandparent", "ˈɡrænpeərənt", "祖父母"]
         ]
       }
     ]
@@ -637,7 +653,9 @@
           ["presenter", "prɪˈzentə", "主持人"],
           ["librarian", "laɪˈbreəriən", "图书管理员"],
           ["sales assistant", "seɪlz əˈsɪstənt", "售货员"],
-          ["taikonaut", "ˈtaɪkənɔːt", "中国宇航员"]
+          ["team", "tiːm", "队伍"],
+          ["fan", "fæn", "粉丝"],
+          ["goal", "ɡəʊl", "进球"]
         ]
       },
       {
@@ -690,7 +708,10 @@
           ["street", "striːt", "街道"],
           ["village", "ˈvɪlɪdʒ", "乡村"],
           ["countryside", "ˈkʌntrisaɪd", "农村"],
-          ["Chinatown", "ˈtʃaɪnətaʊn", "唐人街"]
+          ["Chinatown", "ˈtʃaɪnətaʊn", "唐人街"],
+          ["office building", "ˈɒfɪs ˈbɪldɪŋ", "办公楼"],
+          ["tunnel", "ˈtʌnl", "隧道"],
+          ["stairs", "steəz", "楼梯"]
         ]
       }
     ]
@@ -715,6 +736,8 @@
           ["blackboard", "ˈblækbɔːd", "黑板"],
           ["lesson", "ˈlesn", "课"],
           ["homework", "ˈhəʊmwɜːk", "作业"],
+          ["primary school", "ˈpraɪməri", "小学"],
+          ["middle school", "ˈmɪdl", "中学"],
           ["English", "ˈɪŋɡlɪʃ", "英语"],
           ["Chinese", "ˌtʃaɪˈniːz", "语文"],
           ["Maths", "mæθs", "数学"],
@@ -725,7 +748,8 @@
           ["History", "ˈhɪstri", "历史"],
           ["Geography", "dʒiˈɒɡrəfi", "地理"],
           ["Physics", "ˈfɪzɪks", "物理"],
-          ["Chemistry", "ˈkemɪstri", "化学"]
+          ["Chemistry", "ˈkemɪstri", "化学"],
+          ["speech", "spiːtʃ", "演讲"]
         ]
       }
     ]
@@ -766,8 +790,10 @@
           ["stomach ache", "ˈstʌmək eɪk", "胃痛"],
           ["hurt", "hɜːt", "受伤/痛"],
           ["medicine", "ˈmedsn", "药"],
+          ["broken", "ˈbrəʊkən", "骨折/坏的"],
           ["blind", "blaɪnd", "盲的"],
-          ["deaf", "def", "聋的"]
+          ["deaf", "def", "聋的"],
+          ["illness", "ˈɪlnəs", "疾病"]
         ]
       }
     ]
@@ -840,7 +866,12 @@
           ["fork", "fɔːk", "叉"],
           ["chopsticks", "ˈtʃɒpstɪks", "筷子"],
           ["cup", "kʌp", "杯子"],
-          ["postcard", "ˈpəʊstkɑːd", "明信片"]
+          ["postcard", "ˈpəʊstkɑːd", "明信片"],
+          ["bell", "bel", "铃"],
+          ["camera", "ˈkæmərə", "相机"],
+          ["coin", "kɔɪn", "硬币"],
+          ["violin", "ˌvaɪəˈlɪn", "小提琴"],
+          ["guitar", "ɡɪˈtɑː(r)", "吉他"]
         ]
       }
     ]
@@ -867,6 +898,16 @@
           ["summer", "ˈsʌmə", "夏天"],
           ["autumn", "ˈɔːtəm", "秋天"],
           ["winter", "ˈwɪntə", "冬天"],
+          ["ago", "əˈɡəʊ", "以前"],
+          ["future", "ˈfjuːtʃə", "未来"],
+          ["someday", "ˈsʌmdeɪ", "有朝一日"],
+          ["early", "ˈɜːli", "早"],
+          ["late", "leɪt", "晚"]
+        ]
+      },
+      {
+        "category": "月份与周",
+        "words": [
           ["Monday", "ˈmʌndeɪ", "周一"],
           ["Tuesday", "ˈtjuːzdeɪ", "周二"],
           ["Wednesday", "ˈwenzdeɪ", "周三"],
@@ -888,7 +929,12 @@
           ["November", "nəʊˈvembə", "十一月"],
           ["December", "dɪˈsembə", "十二月"]
         ]
-      },
+      }
+    ]
+  },
+  {
+    "day": 19,
+    "content": [
       {
         "category": "节日",
         "words": [
@@ -898,15 +944,13 @@
            ["birthday", "ˈbɜːθdeɪ", "生日"],
            ["Spring Festival", "sprɪŋ ˈfestɪvl", "春节"],
            ["Mid-Autumn Festival", "mɪd ˈɔːtəm", "中秋节"],
+           ["Dragon Boat Festival", "", "端午节"],
            ["Thanksgiving", "ˌθæŋksˈɡɪvɪŋ", "感恩节"],
-           ["National Day", "ˈnæʃnəl deɪ", "国庆节"]
+           ["National Day", "ˈnæʃnəl deɪ", "国庆节"],
+           ["dragon boat", "ˈdræɡən bəʊt", "龙舟"],
+           ["firecracker", "ˈfaɪəkrækə", "鞭炮"]
         ]
-      }
-    ]
-  },
-  {
-    "day": 19,
-    "content": [
+      },
       {
         "category": "数字",
         "words": [
@@ -962,11 +1006,11 @@
           ["your", "jɔː", "你的"],
           ["his", "hɪz", "他的"],
           ["her", "hɜː", "她的"],
-          ["mine", "maɪn", "我的(东西)"],
-          ["yours", "jɔːz", "你的(东西)"],
-          ["hers", "hɜːz", "她的(东西)"],
-          ["us", "ʌs", "我们"],
-          ["him", "hɪm", "他"]
+          ["mine", "maɪn", "我的"],
+          ["yours", "jɔːz", "你的"],
+          ["hers", "hɜːz", "她的"],
+          ["us", "ʌs", "我们(宾)"],
+          ["him", "hɪm", "他(宾)"]
         ]
       },
       {
@@ -993,7 +1037,32 @@
           ["east", "iːst", "东"],
           ["west", "west", "西"],
           ["south", "saʊθ", "南"],
-          ["north", "nɔːθ", "北"]
+          ["north", "nɔːθ", "北"],
+          ["cross", "krɒs", "穿过"]
+        ]
+      }
+    ]
+  },
+  {
+    "day": 21,
+    "content": [
+      {
+        "category": "★ 补充词汇 (国家/语言/抽象)",
+        "words": [
+           ["peace", "piːs", "和平"],
+           ["world", "wɜːld", "世界"],
+           ["luck", "lʌk", "运气"],
+           ["joy", "dʒɔɪ", "乐趣"],
+           ["mistake", "mɪˈsteɪk", "错误"],
+           ["model", "ˈmɒdl", "模型"],
+           ["shape", "ʃeɪp", "形状"],
+           ["line", "laɪn", "线"],
+           ["circle", "ˈsɜːkl", "圆"],
+           ["French", "frentʃ", "法语"],
+           ["American", "əˈmerɪkən", "美国的"],
+           ["Australian", "ɒˈstreɪliən", "澳大利亚的"],
+           ["poster", "ˈpəʊstə", "海报"],
+           ["stamp", "stæmp", "邮票"]
         ]
       }
     ]
