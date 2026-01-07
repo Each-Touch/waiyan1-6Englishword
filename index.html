@@ -2,11 +2,11 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>飞象老师 - 英语词汇全解</title>
     <style>
         :root {
-            --primary: #02543B; /* 配合Logo的主色调 */
+            --primary: #02543B; /* 飞象老师主色调 */
             --bg: #f3f4f6;
             --card-bg: #ffffff;
             --text-main: #1f2937;
@@ -23,9 +23,10 @@
             /* 顶部留白给固定导航栏 */
             padding: 76px 15px 40px 15px; 
             line-height: 1.5;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        /* --- 顶部 LOGO 栏样式 (保持不变) --- */
+        /* --- 顶部 LOGO 栏样式 --- */
         .watermark-overlay {
             position: fixed;
             top: 0;
@@ -196,8 +197,8 @@
 </div>
 
 <div class="header-box">
-    <h1>20天小学英语词汇全解</h1>
-    <p>包含外研版核心词汇 · 点击喇叭听发音</p>
+    <h1>小学英语词汇全解 (外研版)</h1>
+    <p>每日打卡 · 点击喇叭听发音</p>
     <div class="controls">
         <button onclick="toggleMeaning()" id="btn-toggle">👁️ 遮挡中文</button>
         <button onclick="resetAll()">🔄 重置进度</button>
@@ -208,7 +209,7 @@
 </div>
 
 <script>
-    // 补全后的完整数据
+    // 补全后的完整数据 (基于"单词表大全.docx")
     const fullData = [
   {
     "day": 1,
@@ -667,7 +668,7 @@
           ["bus", "bʌs", "公交车"],
           ["car", "kɑː", "汽车"],
           ["taxi", "ˈtæksi", "出租车"],
-          ["bike", "baɪk", "自行车"],
+          ["bike", "baɪ", "自行车"],
           ["bicycle", "ˈbaɪsɪkl", "自行车"],
           ["train", "treɪn", "火车"],
           ["plane", "pleɪn", "飞机"],
